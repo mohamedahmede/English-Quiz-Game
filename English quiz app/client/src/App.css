@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    background-image: url("./img/2553.jpg");
+    background-size: 1600px;
+
+}
+
+.questionCard {
+    background-color: rgba(252, 252, 154, 0.5);
+    border-radius: 16px;
+    padding: 16px;
+    width: 100%;
+    position: relative;
+    box-shadow: -1px 4px 12px 2px rgba(93, 92, 9, 0.39);
+   
+}
+
+/*Start Game Screen*/
+/*Start Game button is down with the try again button in the score board*/
+.startGame {
+    height: 300px;
+    padding: 46px;
+    border-radius: 0 0 16px 16px;  
+}
+
+.startGame p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.word {
+    background-color: rgb(245, 245, 1);
+    margin: 1.5rem;
+    border: 2rem dashed black;
+    font-size: 70px;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    margin: 2rem auto;
+ 
+}
+
+ul {
+    list-style: none;
+    width: 50%;
+    margin: auto;
+    font-weight: 600;
+    
+}
+
+li {
+    background-color: rgb(194, 194, 0) ;
+    padding: 16px;
+    border: 3px solid white;
+    border-radius:  20px;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+li:hover {
+    background-color: rgb(254, 254, 0);
+    cursor: pointer;
+
+}
+
+.score {
+    background-color: rgb(209, 209, 16);
+    border-radius: 16px;
+    padding: 16px;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: -1px 4px 12px 2px rgba(93, 92, 9, 0.39);
+}
+
+/*Correct answer & wrong answer Effect*/
+.correctAnswer {
+    color: white !important;
+    background-color: green !important;
+    animation: blinker 1s linear infinite;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+
+}
+
+.wrongAnswer {
+    color: white !important;
+    background-color: red !important;
+    animation: blinker 1s linear infinite;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/*Progress Bar*/
+
+.progress {
+	background-color: #d8d8d8;
+	border-radius: 20px;
+    z-index: 1;
+	height: 30px;
+	width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 40px;;
+    margin-bottom: 40px;
+}
+
+.progress-done {
+	background: repeating-linear-gradient(90deg, yellow, yellow 20px, #000 20px, #000 40px); 
+    
+    box-shadow: -1px 4px 12px 2px rgba(93, 92, 9, 0.39);
+
+	border-radius: 20px;
+	color: #fff;
+    font-weight: 900;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.3s;
+}
+
+.progressFont {
+    background-color: #000;
+    height: 100%;
+    width: 2.8rem;
+    
+}
+
+/*Scoreboard*/
+
+.scoreboardHeader {
+    margin: 20px;
+}
+
+.tryAgain ,.startGameBtn{
+    border: 0.1px solid rgb(52, 6, 6, 0.5);
+    box-shadow: -1px 4px 12px 2px rgba(63, 5, 5, 0.39);
+    border-radius: 20px;
+    background-color: red;
+    color: #fff;
+    padding: 16p;
+    margin: 40px;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+.startGameBtn {
+    border-radius: 10px;
+    height: 50px;
+}
+
+.tryAgain:hover, .startGameBtn:hover {
+    background-color: pink;
+    cursor: pointer;
+    border: none;
+    box-shadow: -1px 4px 12px 2px rgba(103, 2, 81, 0.39);
+}
+
+
+/*Responsive*/
+@media only screen and (max-width: 960px) {
+    .word {
+        font-size: 40px;
+        border: 1rem dashed black;
+
+    }
+  }
+  @media only screen and (max-width: 565px) {
+    .word {
+        width: 50%;
+        border: 0.5rem dashed black;
+    }
+  
+  }
+  @media only screen and (max-width: 391px) {
+    .word {
+        width: 50%;
+        border: 0.3rem dashed black;
+        font-size: 30px;
+    }
+    
+    li {
+        font-size: 20px;
+    }
+    
+  }
+  @media only screen and (max-width: 391px) {
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    .questionCard {
+        padding: 0;
+        margin: 0;
+    }
+   
+    
+  }
